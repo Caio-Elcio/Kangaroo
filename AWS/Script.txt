@@ -1,0 +1,24 @@
+Desinstalar os apks;
+sudo apt-get purge git -y
+sudo rm -r /usr/lib/jvm/java-11-oracle -y
+sudo apt-get purge docker.io -y
+
+Instalar o git:
+
+sudo apt-get update
+Sudo apt-get install git
+git --version
+
+Instalar o Docker.io e colocar a i-
+magem do java no container:
+
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+docker pull openjdk
+
+Instalar o Java jre 11 (que é a defa-
+ult):
+
+sudo apt install default-jre -y
+sudo apt install default-jdk -y

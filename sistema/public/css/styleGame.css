@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body { 
+    font-family: 'Poppins', sans-serif;
+    background-color:#345387;
+}
+.container {
+    background: transparent;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    top:0;
+    left: 0;
+}
+.result_box,
+.quiz_box,
+.start_btn,
+.info_box {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto ;
+    transform: translate(-50%,-50% ) scale(1);
+    display: block;
+}
+.start_btn button {
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    color:#345387;
+    padding: 15px 30px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    overflow: hidden;    
+}
+.start_btn button:hover{
+    box-shadow: 0px 9px 12px 0 rgba(0,0,0,0.2),
+                0px 9px 20px 0 rgba(0,0,0,0.2);
+}
+.info_box {
+    display: none;
+    width:38%;
+    background: white;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+ .info_box .info_title {
+    height:60px;
+    width:100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.info_box .info_list {
+     padding: 15px 35px;
+     line-height: 1.2;
+     font-weight: 600;
+}
+.info_box .info_list .info {
+    margin:5px 0;
+    font-size: 17px;
+}
+.info_box .info_list .info span {
+    font-weight: 600;
+    color: #345387;
+}
+.info_box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: lightgrey;
+} 
+.info_box .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    color:white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #345387;
+}
+.buttons button.continue {
+    background-color: #345387;
+    color:white;
+}
+.buttons button.continue:hover {
+    background-color: #345387;
+}
+.buttons button.quit {
+    color:#345387;
+}
+.buttons button.quit:hover {
+    color:white;
+    background-color:#345387;
+}
+/* BOX QUIZZ */
+.quiz_box {
+    width:55%;
+    display: none;
+    border-radius: 5px; 
+    height:70vh;
+    border-radius: 5px;
+}
+.quiz_box header {
+    position: relative;
+    z-index: 99;
+    height:70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+}
+.quiz_box header .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+.quiz_box section {
+    padding: 25px 30px 20px 30px;
+    background-color:#345387;
+    height:55vh;
+}
+.quiz_box section .que_text {
+    font-size:25px;
+    font-weight: 600;
+    margin-bottom: 4%;
+    color:white;
+}
+section .option_list .option {
+    margin-bottom: 5px;
+    border-radius: 1px;
+    height:8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+section .option_list .option:active,:checked, :focus {
+    background-color: lightblue;
+}
+.letter_option {
+    height: 100%;
+    width:15%;
+    background-color: #4182be;
+    color: white;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+section .option_list .option .answer {
+    height: 100%;
+    width: 85%;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+section .option_list .option .answer:hover {
+    background-color:lightblue;
+}
+section .option_list .option .answer {
+    font-size: 19px;
+    color:rgb(32, 32, 32);
+    font-weight: 500;
+}
+section .option_list .option:last-child {
+    margin-bottom: 0px;
+}
+.quiz_box footer {
+    width:100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index:999;
+    background-color: #345387;
+}
+.quiz_box footer .total_que span {
+    display: flex;
+    color:white;
+    font-size: 20px;
+}
+.quiz_box footer .total_que {
+    color: white;
+} 
+footer .total_que span p {
+    font-weight: 700;
+    padding: 0 5px;
+    font-size: 20px;
+}
+.total_que span p:first-child {
+    padding-left: 0px;
+}
+.next_btn {
+    height:40px;
+    padding: 0 13px;
+    font-size: 20px;
+    outline: none;
+    z-index: 999 !important;
+    font-weight: 900;
+    border:1px solid #345387;
+    border-radius: 5px;
+    color:#345387;
+    cursor: pointer;
+}
+.next_btn:active {
+    background-color: rgb(223, 223, 223);
+}
+.result_box {
+    background-color: white;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 6px 10px 0 rgba(0,0,0,0.2),
+    0px 6px 6px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.result_box .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#img_icon {
+    height:100%;
+    width: 25%;
+}
+.result_box .complete_text {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.result_box .score_text span {
+    display: flex;
+    margin:10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.score_text span p {
+    font-weight: 600;
+    padding:  0 4px;
+}
+.result_box .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.result_box .buttons 
+.continue, .quit {
+    margin: 15px 10px;
+    height:40px;
+    padding: 0 20px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid #345387;
+    cursor: pointer;
+    transition: all 0.4 ease;
+}
+.box-area {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255,255,255,0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+.box-area li:nth-child(2) {
+    left:18%;
+    width:65px;
+    height:65px;
+    animation-delay: 3s;
+    animation-duration: 4s;
+}
+.box-area li:nth-child(3) {
+    left: 70%;
+    width:130px;
+    height:130px;
+    animation-delay: 3s;
+    animation-duration: 6s;
+}
+.box-area li:nth-child(4) {
+    left: 15%;
+    width:110px;
+    height:110px;
+    animation-delay: 2.5s;
+}
+.box-area li:nth-child(5) {
+    left: 50%;
+    width:50px;
+    height:50px;
+    animation-delay: 5s;
+    animation-duration: 3s;
+}
+.box-area li:nth-child(6) {
+    left: 90%;
+    width:30px;
+    height:30px;
+    animation-delay: 2s;
+    animation-duration: 6s;
+}
+.box-area li:nth-child(7) {
+    left: 60%;
+    width:85px;
+    height:85px;
+    animation-delay: 4.5s;
+    animation-duration: 7s;
+}
+.box-area li:nth-child(8) {
+    left: 85%;
+    width:80px;
+    height:80px;
+    animation-delay: 5s;
+    animation-duration: 6s;
+}
+.box-area li:nth-child(9) {
+    left: 40%;
+    width:30px;
+    height:30px;
+    animation-delay: 4.5s;
+    animation-duration: 5s;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}

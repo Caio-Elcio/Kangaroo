@@ -1,0 +1,8 @@
+if (total.value > 1000000000000){
+	total/=1000000000;
+	total.setText("%s Gb, total.toString());
+}else{
+	total.setText("%s Tb, total.toString());
+}
+---------------------
+Atualização com intervalo de tempo;

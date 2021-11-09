@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo-kangaroo.jfif">
+    <link rel="stylesheet" href="css/styleMenu.css">
+    <link rel="stylesheet" href="css/styleRelatorios.css">
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="./js/validacoes.js"></script>
+    <script src="./js/dash.js"></script>
+    <title>Relatórios</title>
+</head>
+
+<body onload="verificar_autenticacao()" onload="ligar()">
+    <div class="classePai">
+        <div id="menuRoxo" class="menuRoxo">
+            <ul onmouseover="transicao()" onmouseout="transicao()" class="listaOrdenada">
+                <li onclick="transicao()"><img class="icons" src="assets/burguinhoSVG.svg"></li>
+                <li>
+                    <a href="dashboard.html"><img class="icons" src="assets/Chart.png"></a>
+                    <span class="textMenu" onclick="">Dashboard</span>
+                </li>
+                <li>
+                    <a href="relatorios.html"><img class="icons" src="assets/Document.png"></a>
+                    <span class="textMenu">Relatórios</span>
+                </li>
+                <li>
+                    <a href="profile.html"><img class="icons" src="assets/Profile.png"></a>
+                    <span class="textMenu">Perfil</span>
+                </li>
+                <li class="iconExit">
+                    <a href="computador.html">
+                        <img class="icons" src="assets/computadoor.png">
+                    </a>
+                    <span class="textMenu">Computador</span>
+                </li>
+                <li class="iconExit" onclick="sair()">
+                    <img class="icons" src="assets/Login.png">
+                    <span class="textMenu">Sair</span>
+                </li>
+            </ul>
+        </div>
+        <section class="paiCont">
+            <div class="paiFoto">
+                <label id="username">
+                </label>
+                <div class="fotoLinha">
+                </div>
+            </div>
+            <div class="paiDebaixo">
+                <div class="paiTudoFoto">
+                    <div class="paiFiltroTitulo">
+                        <h1 id="tituloTelas">
+                            Dados de CPU
+                        </h1>
+                    </div>
+                </div>
+                <div data-tela="1" id="telas" class="telaUm">
+                    <div class="paiSetaEsquerda">
+                        <img id="setaEsquerda" onclick="voltarPagina()" src="assets/leftCicle.svg" alt="">
+                    </div>
+                    <div class="paiGrafico">
+                        <div id="tela1" class="grafico">
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                        <div id="tela2" class="graficoDois">
+                            <canvas id="myChart4"></canvas>
+                        </div>
+                        <div id="tela3" class="graficoTres">
+                            <canvas id="myChart5"></canvas>
+                        </div>
+                    </div>
+                    <div class="paiSetaDireita">
+                        <img onclick="avancarPagina()" id="setaDireita" src="assets/Seta.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptsRelatorios.js"></script>
+<script src="js/chartsRelatorios.js"></script>
+<script src="js/dash.js"></script>
+<script> let usuario; verificar_autenticacao();</script>

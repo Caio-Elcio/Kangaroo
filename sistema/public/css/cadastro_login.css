@@ -1,0 +1,210 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+a {
+    cursor: pointer;
+}
+.background {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgb(128,196,210);
+    background: linear-gradient(167deg, rgba(128,196,210,1) 45%, rgba(169,236,155,1) 100%);
+}
+.card-section {
+    display: flex;
+    width: 80%;
+    min-height: 75vh;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+}
+.information-side {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 10px 0px 0px 10px;
+}
+.information-side .container {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.information-side .container img {
+    width: 95%;
+}
+.information-side .container .welcome_msg {
+    margin: 15px 0px 0px 0px;
+    font-size: 28px;
+    font-weight: 500;
+}
+.information-side .container p {
+    margin: 2px 0px 0px 0px;
+    text-align: center;
+    font-size: 18px;
+}
+.form-side {
+    display: flex;
+    width: 50%;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+}
+.form-side h1 {
+    color:rgb(60, 60, 60); 
+    font-size: 30px;   
+}
+.form-side #register_step1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+.form-side #register_step1 .container .div_msg {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+.form-side #register_step1 .container .div_msg p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.form-side #register_step2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.form-side #register_step2 .container .div_msg {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+.form-side #register_step2 .container .div_msg p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color:rgb(60, 60, 60); 
+}
+.form-side .container {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.form-side .container p {
+    font-size: 16px;
+    color:rgb(60, 60, 60); 
+    margin-bottom: 10px;
+}
+.form-side .container input {
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(60, 60, 60, 0.5);
+    outline: none;
+}
+.form-side .container .form-buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 25px 0px 12px 0px;
+}
+.form-side .container .form-buttons p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.form-side .container .form-buttons button {
+    width: 130px;
+    height: 40px;
+    background: rgb(128,196,210);
+    background: linear-gradient(167deg, rgba(128,196,210,1) 45%, rgba(169,236,155,1) 100%);
+    outline: none;
+    border: 0;
+    border-radius: 100px;
+    color: white;
+    font-size: 16px;
+}
+.form-side .container .form-buttons button:hover {
+    transition: 0.2s;
+    background-color: #049792;
+}
+#msg {
+    display: none;
+    width: -webkit-fill-available;
+    text-align: start;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+#mens {
+    display: none;
+    width: -webkit-fill-available;
+    text-align: start;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.label-float {
+    position: relative;
+    padding-top: 16px; 
+    margin-top: 2px; 
+}
+.label-float input {
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance:none;
+    border-radius: 0;
+}
+.label-float input:focus {
+    border-bottom: 2px solid rgb(128,196,210);
+}
+.label-float input::placeholder {
+    color:transparent;
+}
+.label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 29px;
+    margin-left: 5px;
+    font-size: 15px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+}
+.label-float input:required:invalid + label {
+    color: grey;
+}
+.label-float input:focus:required:invalid{
+    border-bottom: 2px solid red;
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+    font-size: 13px;
+    margin-top: 2px;
+    color: grey;
+}

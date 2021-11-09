@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kangaroo</title>
+    <link rel="icon" href="imagens/logo-kangaroo.jfif">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./css/styleGame.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="container">
+        <div class="start_btn">
+            <button>Start Quiz</button>
+        </div>
+        <div class="info_box">
+            <div class="info_title">
+                <span>Regras do jogo</span>
+            </div>
+            <div class="info_list">
+                <div class="info">1. Você <span>não terá</span> tempo para responder o Teste de personalidade
+                    <span>Kangaroo!</span>
+                </div>
+                <div class="info">2. Você só poderá selecionar uma resposta.</div>
+                <div class="info">3. O teste no final irá apresentar uma descrição do seu perfil.</div>
+                <div class="info">4. <span>Atenção:</span> O teste de personalidade Kangaroo ajudará você a identificar
+                    seu perfil na internet para que tenha bons costumes na navegação pela rede.
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Sair</button>
+                <button class="continue">Continuar</button>
+            </div>
+        </div>
+        <div class="quiz_box">
+            <section>
+                <div class="que_text">
+                </div>
+                <div class="option_list">
+                </div>
+            </section>
+            <footer>
+                <div class="total_que">
+                    <span>
+                        <p>1</p>de<p>8</p>Questões
+                    </span>
+                </div>
+                <button class="next_btn">Próximo</button>
+            </footer>
+        </div>
+        <div class="result_box">
+            <div class="icon">
+                <img id="img_icon" src="assets/crown.png">
+            </div>
+            <div class="complete_text">Você completou o Teste de personalidade!</div>
+            <div class="score_text">
+                <span>lindo</span>
+            </div>
+            <div class="buttons">
+                <button class="continue">Replay Quiz</button>
+                <button class="quit">Sair do jogo</button>
+            </div>
+        </div>
+</body>
+
+</html>
+<script src="js/jogo.js"></script>
+<script src="js/questions.js"></script>

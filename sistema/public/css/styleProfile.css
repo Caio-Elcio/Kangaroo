@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.backgroundFather {
+    background-color: #F4F4F4;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.paiConteudo {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+/* Estilização da foto do canto */
+.paiFoto {
+    height: 13vh;
+    width: 100%;  
+    padding-right: 20px;  
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* Legenda ao lado da foto */
+.paiFoto label {
+    color: #4b4a4a;
+    font-size: 16px;
+}
+.fotoLinha {
+    height: 4rem;
+    width: 4rem;
+    margin: 10px 10px;
+    border: #2E4D72 solid;
+    border-radius: 57%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/account.svg) center no-repeat;
+    background-size: 3rem;
+}
+.fotoLinha img {
+    height: 9vh;
+}
+/* Div Pai cards */
+.cards {
+    height: 85.6vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card1 {
+    height: 27rem;
+    width: 18rem;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    transform: translateX(0px);
+    transition: 1.0s all;
+    border: 3px solid #2E4D72;
+}
+.card1:hover {
+    box-shadow: 6px 6px 6px 6px #EBC9FF;
+    /* transform: translateX(20px); */
+}
+.fotoLinha2 {   
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/account.svg) center no-repeat;
+    background-size: 5rem;
+}
+.card1 img {
+    height: 20vh;
+}
+.card1 h1 {
+    color: #414141;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.card1 p {
+    font-size: 15px;
+    color: #5a5a5a;
+}
+.card1 .infos {
+    height: 13rem;
+    width: 100%;
+    padding: 1rem 0rem 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card1 .infos input {
+    display: none;
+    border-color: #2E4D72;
+    border-radius: 3px;
+    border-width: 2px;
+    height: 2rem;
+    padding-left: 0.4rem;
+}
+.card1 .infos div span input{
+    width: 15vw;
+}
+.senha1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card1 .infos .img-olhoI {
+    height: 4vh;
+    cursor: pointer;
+    display: none;
+}
+.card1 .infos .img-olhoIC {
+    height: 4vh;
+    display: none;
+    cursor: pointer;
+}
+.card1 .infos .img-olho {
+    height: 4vh;
+    display: block;
+    cursor: pointer;
+}
+.card1 .infos .img-olhoC {
+    height: 4vh;
+    display: none;
+    cursor: pointer;
+}
+.card1 .edit .btnEditar1 {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.card1 .edit .imgEditar1 {
+    height: 5vh;
+    display: flex;
+}
+.card1 .edit .btnSalvar1 {
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    cursor: pointer;
+}
+.card1 .edit .imgSalvar1 {
+    height: 4vh;
+    display: none;
+}
+.card1 .infos > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#editarSenha1 {
+    width: 15vw;
+}
+/* Fim Primeiro Card */
+/* Terceiro Card */
+.card3 {
+    height: 27rem;
+    width: 18rem;
+    border-radius: 10px;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    transform: translateX(0px);
+    transition: 1.0s all;
+    border: 3px solid #2E4D72;
+}
+.card3:hover {
+    box-shadow: 10px 10px 10px 10px #EBC9FF;
+}
+.fotoLinha4 {   
+    height: 16vh;
+    width: 16vh;
+    margin: 15px 10px;
+    border: #2E4D72 solid;
+    border-radius: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/default.jpg) center no-repeat;
+    background-size: cover;
+}
+.fotoLinha5 {   
+    height: 16vh;
+    width: 16vh;
+    margin: 15px 10px;
+    border: #2E4D72 solid;
+    border-radius: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card3 #container {
+    height: 100%;
+    width: 90%;
+}
+.card3 h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.card3 .container .info-dependente {
+    height: 54%;
+    width: 106%;
+    display: flex;
+    margin-left: -3%;
+}
+.card3 .container .info-dependente input {
+    display: none;
+}
+.card3 .info-dependente p {
+    font-size: 15px;
+    color: #5a5a5a;
+}
+.card3 .container .info-dependente b {
+    display: inline-block;
+    height: 5vh;
+    margin-top: 5%;
+}
+.card3 .container .info-dependente span {
+    height: 5vh;
+}
+.card3 .container .info-dependente #editarnomeCrianca {
+    width: 15vw;
+}
+.card3 .container .info-dependente #editarSexoCrianca {
+    width: 10vw;
+    margin-top: 5%;
+}
+.card3 .container .info-dependente .editCrianca {
+    height: 4vh;
+    width: 2vw;
+    margin-left: 16vh;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+.card3 .info-dependente .btnEditarCrianca {
+    border: none;
+    width: 0vw;
+    cursor: pointer;
+}
+.card3 .info-dependente .imgEditarCrianca {
+    height: 4vh;
+    margin-left: 0vh;
+    display: flex;
+}
+.card3 .info-dependente .btnSalvarCrianca {
+    border: none;
+    width: 0vw;
+    cursor: pointer;
+    display: none;
+}
+.card3 .info-dependente .imgSalvarCrianca {
+    height: 4vh;
+    margin-left: -14vh;
+    margin-top: -2vh;
+    display: none;
+}
+.card3 .info-dependente img {
+    height: 3vh;
+    margin-left: 22vh;
+}
+.card3 .plus {
+    display: flex;
+    justify-content: center;
+}
+.card3 .plus img {
+    height: 8vh;
+}
+.edit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+/* Fim Terceiro Card */
+/* MODAL */
+.modal {
+    display: none;
+}
+.modal a {
+    text-decoration:none;
+    border:none;
+}
+/* Modal */
+.modal {
+    display: none;
+}     
+.modal:target {
+    display: flex;
+}
+.modal {
+    text-align: left;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+.modal:target {
+    justify-content: space-around;
+    align-items: center;
+}
+.modal_overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}     
+.modal:target {
+    justify-content: space-around;
+    align-items: center;
+}     
+.modal__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    cursor: default;
+}     
+.modal_content {
+    width: 40rem;
+    height: 25rem;
+    position: relative;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+}     
+.modal_content-user {
+    width:30%;
+    height:40%;
+    position: relative;
+    background-color: white;
+    padding: 2rem;
+    overflow: scroll;
+}
+.modal_content-mus {
+    width:25%;
+    height:25%;
+    position: relative;
+    background-color: white;
+    padding: 2rem;
+    overflow: scroll;
+}
+.modal-button {
+    width: 100%;
+    display: flex; 
+    justify-content: flex-end;
+}
+#modal-body {
+    border-top: 1px solid #f4f4f4;
+    height:80%;
+}
+#modal-body h4 {
+    font-size:22px;
+    color:#2E4D72;
+}
+#modal-body input {
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(60, 60, 60, 0.5);
+    outline: none;
+    margin-top: 3%;
+    color:grey;
+}
+/* style dos inputs */
+#modal-body select {
+    width: 100%;
+    height: 42px;
+    margin-top: 22px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(60, 60, 60, 0.5);
+    outline: none;
+    color:grey;
+}
+#modal-body p {
+    margin-right: 73%;
+    margin-top: 3%;
+    font-size: 14px;
+    width: auto;
+}
+#modal-body button {
+    width: 130px;
+    height: 40px;
+    background: #2E4D72;
+    outline: none;
+    border: 0;
+    border-radius: 100px;
+    color: white;
+    font-size: 16px;
+    transition: 2s;
+    margin-left: 81%;
+}
+#modal-body button:hover {
+    transition: 0.2s;
+    border:6px solid #2E4D72;
+    cursor: pointer;
+} 
+#modal-body #imageCadastro {
+    border:2px solid white;
+    outline: none;
+    padding-left: 0px;
+}
+.modal__content {
+    min-width: 480px;
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 2rem;
+}     
+.modal__close {
+    color: initial;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.5rem;
+    display: inline-block;
+}
+/* Fim Modal */
+.containerQuadrados {
+    height: 18rem;
+    overflow: auto;
+    padding-right: 0.5rem
+}
+.containerQuadrados::-webkit-scrollbar {
+    width: 0.5rem;
+}
+.containerQuadrados::-webkit-scrollbar-thumb {
+    background-color: #7a7979 ;
+    border-radius: 6px;
+}
+.quadradoEmVolta {
+    height: 5rem;
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #E6E0E0;
+    border-radius: 5px;
+}
+.containerTxt {
+    display: flex;
+    flex-direction: column;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #3b3b3b;
+}
+#fotoEdit {
+    height: 2rem;
+}
+.photoDiv {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: aqua;
+}

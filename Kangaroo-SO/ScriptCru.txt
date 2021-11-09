@@ -1,0 +1,112 @@
+------------------------------------ Script ---------------------------------------------
+#!/bin/bash
+
+# Início
+clear
+echo "Kangaroo-Bot) Olá, sou o Kangaroo-Bot e vou lhe acompanhar nessa instalação :)"
+sleep 3
+clear
+echo "Kangaroo-Bot) atualizando o apt-get para as instalações necessárias :)"
+echo " "
+sleep 3
+sudo apt-get update
+clear
+
+# Instalação do Git
+echo "Kangaroo-Bot) verificando se você tem o Git ;D"
+echo " "
+sleep 3
+git --version
+if [ $? -eq 0 ]
+	then
+        	echo " "
+		echo "Kangaroo-Bot) você já tem o git instalado ^^"
+		sleep 2
+        	echo "Kangaroo-Bot) vou até mesmo puxar o repositório para você :D"
+		sleep 2
+        	sudo rm -r Kangaroo-SO
+        	git clone https://github.com/Luiz-Gustavo-Silva/Kangaroo-SO.git
+		sleep 3
+	else
+        	echo " "
+		echo "Kangaroo-Bot) você não tem o git instalado, vou instalá-lo para você ;)"
+		sleep 2
+		sudo apt-get install git
+		git --version
+		if [ $? -eq 0 ]
+			then
+		                echo " "
+				echo "Kangaroo-Bot) prontinho, agora você tem o git instalado ;)"
+		                sleep 2
+                		echo "Kangaroo-Bot) vou até mesmo puxar o repositório para você :D"
+				sleep 2
+                		sudo rm -r Kangaroo-SO
+		                git clone https://github.com/Luiz-Gustavo-Silva/Kangaroo-SO.git
+				sleep 3
+		fi
+fi
+clear
+
+# Instalação do Docker.io
+
+echo "Kangaroo-Bot) agora estou verificando se você tem o Docker.io :3"
+sleep 2
+versaodocker="$(docker --version 2>&1 | grep version)"
+if [ "${versaodocker}" ] ; 
+    then
+        echo " "
+        echo "Kangaroo-Bot) você já tem o Docker instalado ^^"
+        sleep 3
+    else
+        echo " "
+        echo "Kangaroo-Bot) você não tem o Docker instalado, então vou instalá-lo para você ;)"
+	sleep 3
+        sudo apt install docker.io
+        docker version
+        if [ $? -eq 0 ]
+			then
+                	echo " "
+			echo "Kangaroo-Bot) prontinho, agora você tem o Docker instalado, vou baixar a imagem do Mysql para você :D"
+			sleep 2
+                	sudo systemctl start docker
+                	sudo systemctl enable docker
+                	sudo docker pull mysql:5.7
+			sleep 3
+			echo "Kangaroo-Bot) prontinho, agora vou preparar o container do java :D"
+	fi
+fi
+clear
+
+# Montando os containers
+
+echo "Kangaroo-Bot) pronto! Todas instalações foram feitas com sucesso para a execução do arquivo ;D"
+echo " "
+sleep 3
+clear
+echo "Kangaroo-Bot) abrindo o Java no container do MySQL ^v^"
+sudo docker start ################
+docker run --network=host -d -v /home/ubuntu/Desktop:/mnt --name $$$$$$$$$$$$$$ -it openjdk:11 bash
+docker exec $$$$$$$$$$$$$$$$$$$$ /bin/sh -c "java -jar /mnt/KangarooAntigo-1.0-SNAPSHOT-jar-with-dependencies.jar"
+echo "E grand finale! Vamos abrir seu jar pela linha de comando!"
+docker exec -it $$$$$$$$$$$$$$$$$ bash
+---------------------------------- observações -----------------------------------------------------------------------------------------
+$$$$$$$$$$$$$ = nome do container do java de vocês, pode ser qualquer nome;
+############# = id do container do MYSQL de vocês.
+
+----- Para criar o ambiente mysql corretamente
+sudo systemctl start docker;
+sudo systemctl enable docker;
+sudo docker pull mysql:5.7;
+sudo docker run -d -p 3306:3306 --name ConteinerBD -e "MYSQL_DATABASE=dbKangaroo" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
+sudo docker ps (e pegue o containerID)
+sudo docker exec -it ############## bash
+----- Caso queiram usar o usuário root ao invés do ubuntu
+sudo -s
+----- Para remover os container do java (NÃO PODE TER CONTAINERS COM O MESMO NOME)
+sudo docker ps -a
+(pegue o containerID)
+sudo docker rm -f containerID
+----- Não precisa normalmente, mas caso queira remover alguma imagem
+sudo docker images
+(pega o image id)
+sudo docker rmi imageID

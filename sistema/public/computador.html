@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo-kangaroo.jfif">
+    <link rel="stylesheet" href="css/styleMenu.css">
+    <link rel="stylesheet" href="css/computador.css">
+    <script src="jsComputador/funcoes.js"></script>
+    <script src="./js/validacoes.js"></script>
+    <title>Computadores</title>
+</head>
+
+<body>
+    <div class="divPai">
+        <div id="menuRoxo" class="menuRoxo">
+            <ul onmouseover="transicao()" onmouseout="transicao()" class="listaOrdenada">
+                <li onclick="transicao()"><img class="icons" src="assets/burguinhoSVG.svg"></li>
+                <li>
+                    <a href="dashboard.html"><img class="icons" src="assets/Chart.png"></a>
+                    <span class="textMenu" onclick="">Dashboard</span>
+                </li>
+                <li>
+                    <a href="relatorios.html"><img class="icons" src="assets/Document.png"></a>
+                    <span class="textMenu">Relatórios</span>
+                </li>
+                <li>
+                    <a href="profile.html"><img class="icons" src="assets/Profile.png"></a>
+                    <span class="textMenu">Perfil</span>
+                </li>
+                <li class="iconExit">
+                    <a href="computador.html">
+                        <img class="icons" src="assets/computadoor.png">
+                    </a>
+                    <span class="textMenu">Computador</span>
+                </li>
+                <li class="iconExit" onclick="sair()">
+                    <img class="icons" src="assets/Login.png">
+                    <span class="textMenu">Sair</span>
+                </li>
+            </ul>
+        </div>
+        <div class="paiFoto">
+            <h1>Meus computadores</h1>
+            <div id="info-user">
+                <label id="username">Olá,</label>
+                <div class="fotoLinha"></div>
+            </div>
+        </div>
+        <a href="#modal">
+            <button id="btn-add-pc" href="#modal">Novo</button>
+        </a>
+        <div class="div-table">
+            <table id="customers">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Apelido do computador</th>
+                        <th>Sistema Operacional</th>
+                        <th>Deletar</th>
+                    </tr>
+                </thead>
+                <tbody id="dadosTabela">
+                </tbody>
+            </table>
+        </div>
+        <div class="modal" id="modal" tabindex="-1">
+            <div id="modalQuadrado" class="modal_content">
+                <a href="#" class="modal_overlay" aria-label="Fechar" style="text-decoration: none;
+                padding-left: 95%; font-weight: 650;">X</a>
+                <div id="modal-body">
+                    <h4 style="color:#2E4D72;">Cadastro de computadores</h4>
+                    <input type="text" id="apelidoPc" name="apelidoPc" placeholder="Como quer apelidar seu computador?"
+                        required minlength="3">
+                    <select id="so">
+                        <option value="invalid">Selecione o sistema operacional</option>
+                        <option value="Linux">Linux</option>
+                        <option value="Debian">Debian</option>
+                        <option value="MacOS">MacOs</option>
+                        <option value="Windows7">Windows 7</option>
+                        <option value="Windows8">Windows 8</option>
+                        <option value="Windows10">Windows 10</option>
+                    </select>
+                    <button type="submit" onclick="setComputadores()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/computador.js"></script>
+<script src="js/script.js"></script>
+<script src="js/appComputadores.js"></script>
+<script> let usuario; verificar_autenticacao();</script>

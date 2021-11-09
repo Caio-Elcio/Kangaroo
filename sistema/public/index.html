@@ -1,0 +1,270 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kangaroo</title>
+    <script src="js/scriptDuvidas.js"></script>
+    <link rel="icon" href="imagens/logo-kangaroo.jfif">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="div-banner">
+        <div class="menu" id="menu">
+            <div id="div-logo">
+                <h1>KANGAROO</h1>
+            </div>
+            <div id="div-itensmenu">
+                <ul class="ul">
+                    <li> <a class="listamenu" href="#home">HOME</a></li>
+                    <li> <a class="listamenu" href="./jogo.html">JOGO</a></li>
+                    <li> <a class="listamenu" href="#sobre1">SOBRE</a></li>
+                    <li> <a class="listamenu" href="#diferencial">DIFERENCIAL</a></li>
+                    <li> <a class="listamenu" href="#equipe">EQUIPE</a></li>
+                    <li> <a class="listamenu" href="#duvidas">DÚVIDAS</a></li>
+                    <li> <a class="listamenu" href="#contato">CONTATO</a></li>
+                    <li> <a href="login_cadastro.html" class="btn-menu" id="btn-menu1">ENTRAR</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="home">
+            <div class="div-info-banner" id="div-info-banner1">
+                <h1><span><i>#</i></span>Educar não é proibir, é ensinar!</h1>
+                <button id="btn-saiba">
+                    <a href="#servico">SAIBA MAIS</a>
+                </button>
+            </div>
+            <div class="div-info-banner" id="div-info-banner2">
+                <img src="imagens/banner2.png">
+            </div>
+        </div>
+    </div>
+    <br id="sobre1"><br><br>
+    <div class="div-box" id="sobre">
+        <br id="diferencial"><br><br>
+        <div class="div-box" id="diferencial">
+            <div id="box-cards">
+                <div class="cards" id="card1">
+                    <h2>MISSÃO</h2>
+                    <h4>Levar segurança na navegação pela internet de crianças, garantindo segurança aos pais</h4>
+                </div>
+                <div class="cards" id="card2">
+                    <h2>VISÃO</h2>
+                    <h4>Se tornar a melhor ferramenta educacional no conceito de uso da internet para crianças<h4>
+                </div>
+                <div class="cards" id="card3">
+                    <h2>VALORES</h2>
+                    <h4>Honesto, seguro e inteligente</h4>
+                </div>
+            </div>
+        </div>
+        <div class="div-box" id="servico">
+            <div class="text">
+                <h2>KANGAROO É EDUCAÇÃO!</h2><br><br>
+                <p>O nosso sistema possui I.A (Inteligência Artificial), que irá reconhecer a criança
+                    que estará utilizando a máquina naquele momento. <br>
+                    Além disso, nosso sistema realiza o monitoramento da CPU, Memória RAM e DISCO da máquina que estará
+                    sendo utilizada, exibindo os dados
+                    coletados na nossa Dashboard. <br>
+                    Contamos também com o um joguinho!!! É um Quiz composto com 8 questões, onde aborda costumes de
+                    navegação na internet e no final apresentará o resultado da personalidade criança.
+                </p>
+                <div id="notaAdesiva">
+                </div>
+            </div>
+            <div id="img-servico">
+                <img src="./imagens/bannerMenina.png" id="imagemthumb" alt="">
+            </div>
+        </div>
+        <div class="div-box" id="equipe">
+            <br><br><br>
+            <h1>EQUIPE</h1>
+            <!-- SLIDES -->
+            <div class="slide">
+                <div class="slides">
+                    <div>
+                        <div class="personagem">
+                            <img src="./imagens/Beatriz Campos.png">
+                            <br> Beatriz Campos
+                        </div>
+                    </div>
+                    <div>
+                        <div class="personagem">
+                            <img src="./imagens/Gabriel Wesley.png">
+                            <br> Gabriel Wesley
+                        </div>
+                    </div>
+                    <div>
+                        <div class="personagem">
+                            <img src="./imagens/Caio Elcio.png">
+                            <br> Caio Elcio
+                        </div>
+                    </div>
+                    <div>
+                        <div class="personagem">
+                            <img src="./imagens/Thais Calazans.png">
+                            <br> Thaís Calazans
+                        </div>
+                    </div>
+                    <div>
+                        <div class="personagem">
+                            <img src="./imagens/Luiz Gustavo.png">
+                            <br> Luiz Gustavo
+                        </div>
+                    </div>
+                    <div>
+                        <div class="personagem">
+                            <img src="./imagens/Gabriel Alvares.png">
+                            <br> Gabriel Alvares
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM SLIDES -->
+        </div>
+        <!-- DÚVIDAS -->
+        <div class="div-box" id="duvidas">
+            <br><br><br>
+            <div class="container_duvidas">
+                <h1>DÚVIDAS</h1>
+                <div class="accordion" id="acc1" onclick="ativarAcc1()" onclick="ativarAcc1()">
+                    <div class="icon_duvidas" id="icd1"></div>
+                    <h5> O que o nosso projeto tem a oferecer?</h5>
+                </div>
+                <div class="painel" id="pnl1">
+                    <p> Um recurso disponibilizado em vários softwares e sistemas
+                        operacionais como meio de conexão dos pais com o conteúdo
+                        que os filhos utilizam tanto no computador quanto no
+                        sistema operacional, tendo como possibilidade restringir
+                        conteúdos inadequados e programas desnecessários para a
+                        idade mental da criança.
+                    </p>
+                </div>
+                <div class="accordion" id="acc2" onclick="ativarAcc2()">
+                    <div class="icon_duvidas" id="icd2"></div>
+                    <h5> Para qual público o nosso projeto é destinado?</h5>
+                </div>
+                <div class="painel" id="pnl2">
+                    <p> Temos como público alvo crianças entre 5 a 10 anos de idade.
+                        Tendo a opção dos responsáveis permitir a utilização do
+                        sistema para adolescentes.
+                    </p>
+                </div>
+                <div class="accordion" id="acc3" onclick="ativarAcc3()">
+                    <div class="icon_duvidas" id="icd3"></div>
+                    <h5> Kangaroo tem algum jogo educativo para as crianças?</h5>
+                </div>
+                <div class="painel" id="pnl3">
+                    <p> Futuramente iremos disponibilizar um jogo educativo
+                        para as crianças. Estamos trabalhando nas idéias e
+                        pensando em como será desenvolvido.
+                    </p>
+                </div>
+                <div class="accordion" id="acc4" onclick="ativarAcc4()">
+                    <div class="icon_duvidas" id="icd4"></div>
+                    <h5> O resposável pode cadastrar mais de uma criança na plataforma?</h5>
+                </div>
+                <div class="painel" id="pnl4">
+                    <p> Sim, preenchendo as informações corretas no campo de cadastro, poderá
+                        cadastrar mais de uma crianca.
+                    </p>
+                </div>
+                <div class="accordion" id="acc5" onclick="ativarAcc5()">
+                    <div class="icon_duvidas" id="icd5"></div>
+                    <h5> Quais informações o responsável precisa informar para o cadastro?</h5>
+                </div>
+                <div class="painel" id="pnl5">
+                    <p> Nome do responsável. <br> CPF. <br> E-mail <br> Senha.</p>
+                </div>
+                <div class="painel">
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing,
+                        dolor sit amet consectetur.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- FIM DÚVIDAS -->
+        <!-- CONTATO -->
+        <footer id="contato">
+            <div class="container">
+                <div class="sec aboutus">
+                    <h2>Saiba Mais</h2>
+                    <p>Kangaroo é um site para vocês pais ou<br>responsável que gostaria de saber o que<br>sua criança
+                        faz
+                        durante sua ausência.</p>
+                    <p>Nosso sistema lhe enviará relatórios<br> sobre o uso do computador dela durante o dia.</p>
+                    <ul class="sci">
+                        <li><a href="https://github.com/BandTec/2ADSB-2021-1-Grupo-09" target="_blank">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec quickLinks">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="#">Riscos que crianças sofrem na internet</a></li>
+                        <li><a href="#">Importância da educação</a></li>
+                    </ul>
+                </div>
+                <div class="sec contact">
+                    <h2>Contatos</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker" aria-hidden="true" style="color: black;"></i></span>
+                            <span>Rua Haddock Lobo, 150 <br>
+                                Cerqueira César, São Paulo <br>Brasil.
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone" aria-hidden="true" style="color: black;"></i></span>
+                            <p>
+                                <a href="tel:5511941282899">+55 (11) 94128-2899</a><br>
+                            </p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope" aria-hidden="true" style="color: black;"></i></span>
+                            <p><a href="mailto:kangaroo@gmail.com">kangaroo@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyrightText">
+            <p>Copyright © 2021 Kangaroo. Todos os direitos reservados.</p>
+        </div>
+        <!-- FIM TELA CONTATO -->
+        <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</body>
+
+</html>
+<!-- ARQUIVOS SLIDES -->
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/jquery-migrate.js"></script>
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+<!-- FIM ARQUIVOS SLIDES -->
+
+<script>
+    /*  ARQUIVOS EM JS DAS DÚVIDAS */
+    var acc = document.getElementsByClassName('accordion');
+    var i;
+    var len = acc.length;
+    for (i = 0; i < len; i++) {
+        acc[i].addEventListener('click', function () {
+            this.classList.toggle('active');
+            /*var painel = this.nextElementSibling;
+            if (painel.style.maxHeight) {
+                painel.style.maxHeight = null;
+            } else {
+                painel.style.maxHeight = painel.scrollHeight + 'px'
+            }*/
+        })
+    }
+    /* FIM ARQUIVOS EM JS DÚVIDAS */
+</script>

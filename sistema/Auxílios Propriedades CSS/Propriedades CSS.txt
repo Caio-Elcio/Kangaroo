@@ -1,0 +1,86 @@
+justify-content é uma propriedade que alinha os itens 
+horizontalmente e aceita os seguintes valores:
+
+flex-start: Os itens são alinhados à esquerda do 
+contêiner.
+flex-end: Os itens são alinhados ao lado direito do 
+contêiner.
+center: Os itens são alinhados no centro do contêiner.
+space-between: Os itens são exibidos com espaçamento igual
+entre eles.
+space-around: Os itens são exibidos com espaçamento igual 
+ao redor deles.
+
+align-items é uma propriedade CSS que alinha os itens 
+verticalmente e aceita os seguintes valores:
+
+flex-start: Os itens são alinhados ao topo do contêiner.
+flex-end: Os itens são alinhados ao fundo do recipiente.
+center: Os itens são alinhados no centro vertical do 
+contêiner.
+baseline: Os itens são exibidos na linha de base do 
+contêiner.
+stretch: Os itens são esticados para caber no contêiner.
+
+flex-direction é uma propriedade que define a direção em
+que os itens são colocados no contêiner e aceita os 
+seguintes valores:
+
+row: Os itens são colocados da mesma forma que a direção
+do texto.
+row-reverse: Os itens são posicionados opostos à direção do
+texto.
+column: Os itens são colocados de cima para baixo.
+column-reverse: Os itens são colocados de baixo para cima.
+
+order - às vezes, inverter a ordem das linhas ou colunas de
+um contêiner não é suficiente. Nesses casos, podemos aplicar
+a orderpropriedade a itens individuais. Por padrão, os itens
+têm um valor de 0, mas podemos usar essa propriedade para 
+defini-la também como um valor inteiro positivo ou negativo
+(-2, -1, 0, 1, 2).
+
+align-selg é uma propriedade que se aplica a itens individuais,
+aceita os seguintes valores:
+
+align-items e seu valor para o item específico.
+
+Os itens são todos espremidos em uma única fileira. 
+Distribua-os usando a flex-wrap propriedade, que aceita
+os seguintes valores:
+
+nowrap: Cada item é adequado a uma única linha.
+wrap: Os itens são agrupados em linhas adicionais.
+wrap-reverse: Os itens são agrupados em linhas adicionais
+ao contrário.
+
+As duas propriedades flex-direction e flex-wrap são 
+utilizadas tantas vezes juntos que a propriedade 
+estenográfica flex-flow foi criado para combiná-los. Esta
+propriedade abreviada aceita o valor das duas propriedades
+separadas por um espaço.
+
+Por exemplo, você pode usar flex-flow: row wrap para 
+definir linhas e agrupá-las.
+
+Itens espalhados por toda pagina, mas agrupados no topo. 
+Você pode usar align-content para definir como várias 
+linhas são espaçadas umas das outras. Esta propriedade 
+assume os seguintes valores:
+
+flex-start: As linhas são embaladas na parte superior do 
+contêiner.
+flex-end: As linhas são embaladas no fundo do contêiner.
+center: As linhas são embaladas no centro vertical do 
+contêiner.
+space-between: As linhas são exibidas com espaçamento igual
+entre elas.
+space-around: As linhas são exibidas com espaçamento igual
+ao redor delas.
+stretch: As linhas são esticadas para caber no contêiner.
+
+Isso pode ser confuso, mas align-content determina o 
+espaçamento entre as linhas, enquanto align-items determina
+como os itens como um todo são alinhados dentro do 
+contêiner. Quando há apenas uma linha, align-content não tem
+efeito.

@@ -1,0 +1,23 @@
+------	Página WEB:
+
+* HTML;
+* CSS;
+* JS;
+* NODE;
+* AZURE;
+
+------ Aplicação:
+
+* Python;
+* JAVA;
+* Jar;
+* Batch;
+* Azure;
+
+------ Dashboard:
+
+* HTML;
+* CSS;
+* JS;	
+* Node;
+* Azure;

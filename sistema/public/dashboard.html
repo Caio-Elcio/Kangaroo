@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleMenu.css">
+    <link rel="stylesheet" href="css/styleDash.css">
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="./js/validacoes.js"></script>
+    <script id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=ea756e0a-063f-47bc-8cca-188cdffdcf71"> </script>
+    <title>Dashboard</title>
+</head>
+
+<body onload="verificar_autenticacao()">
+    <div class="backgroundFather">
+        <div id="menuRoxo" class="menuRoxo">
+            <ul onmouseover="transicao()" onmouseout="transicao()" class="listaOrdenada">
+                <li>
+                    <img class="icons" src="assets/burguinhoSVG.svg">
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <img class="icons" src="assets/Chart.png">
+                    </a>
+                    <span class="textMenu" onclick="">Dashboard</span>
+                </li>
+                <li>
+                    <a href="relatorios.html">
+                        <img class="icons" src="assets/Document.png">
+                    </a>
+                    <span class="textMenu">Relatórios</span>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <img class="icons" src="assets/Profile.png">
+                    </a>
+                    <span class="textMenu">Perfil</span>
+                </li>
+                <li class="iconExit">
+                    <a href="computador.html">
+                        <img class="icons" src="assets/computadoor.png">
+                    </a>
+                    <span class="textMenu">Computador</span>
+                </li>
+                <li class="iconExit" onclick="sair()">
+                    <img class="icons" src="assets/Login.png">
+                    <span class="textMenu">Sair</span>
+                </li>
+            </ul>
+        </div>
+        <section class="paiConteudo">
+            <div class="paiFoto">
+                <label id="username">
+                </label>
+                <div class="fotoLinha"></div>
+            </div>
+            <div class="tituloDiv">
+                <h1>Painel</h1>
+            </div>
+            <div class="fileiraCardsColoridos">
+                <div class="cardOne">
+                    <label class="textoMenor">
+                        Criança conectada <br> no momento
+                    </label>
+                    <label id="criancaConectada" class="textoMaior"></label>
+                </div>
+                <div class="cardTwo">
+                    <label class="textoMenor">
+                        Sites navegados <br> (Quantidade)
+                    </label>
+                    <label id="sitesNavegados" class="textoMaior"></label>
+                </div>
+                <div class="cardThree">
+                    <label class="textoMenor">
+                        Sites maliciosos <br> (Quantidade)
+                    </label>
+                    <label class="textoMaior">
+                    </label>
+                </div>
+                <div class="cardFourth">
+                    <label class="textoMenor">
+                        Tempo de atividade no PC <br> (HH)
+                    </label>
+                    <label class="textoMaior">
+                    </label>
+                </div>
+            </div>
+            <div class="graficosInferiores">
+                <div class="graficoLinha1">
+                    <label>
+                        Sites mais navegados
+                    </label>
+                    <canvas id="myChart1">
+                    </canvas>
+                </div>
+                <div class="graficoLinha2">
+                    <label>
+                        Tempo de atividade no navegador
+                    </label>
+                    <canvas id="myChart2">
+                    </canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="js/dash.js"></script>
+<script src="js/script.js"></script>
+<script type="module" src="js/charts.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/cards.js"></script>
+<script> let usuario; verificar_autenticacao();</script>

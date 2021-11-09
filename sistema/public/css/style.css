@@ -1,0 +1,613 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;   
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.div-banner {
+    height:95vh;
+    width:100vw;
+    background: violet;
+    background:url(../imagens/a\ volta\ dos\ bichos.png)top no-repeat;
+    background-size: cover;
+}
+.menu {
+    height: 8%;
+    width:100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    /*Propriedade que faz o padding respeitar a caixa, sem empurrar ngm.*/
+    box-sizing: border-box; 
+    /*independente do elemento que esteja, ela fica até 999 divs acima */
+    z-index: 999;  
+    transition: all 0.2s ease-in-out;
+}
+#div-itensmenu {
+    width:50%;
+    transition: all 15ms ease;
+}
+#div-itensmenu li a:hover{
+    border-bottom: 3px solid #90cf83;
+}
+#div-logo {
+    height:100%;
+    width:10%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#div-logo h1 {
+    color:white;
+    font-size: 28px;
+    font-family: cursive;
+}
+.menu ul {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: space-evenly;   
+}
+#logo {
+    height:100%;
+    width:5%;
+}
+.menu a {
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+}
+.btn-menu {
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color:white;
+    cursor: pointer;
+}
+#btn-menu1 {
+    background: #85c279;
+    padding: 5px 10px;
+    width:20px;
+    transition: all 10ms ease-in;
+}
+#btn-menu1:hover {
+    background-color: #6dad60;
+}
+#btn-menu2 {
+    background-color: #a9ec9b;
+    border:2px solid #a9ec9b;
+    padding: 3px 10px;
+}
+.div-box {
+    height:90%;
+    width:100%; 
+}
+#home {
+    height:90%;
+    width:100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.div-info-banner {
+    height: 47%;
+    float: left;
+}
+#div-info-banner1 {
+    width:45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-items: left;
+}
+#div-info-banner1 h1 {
+    font-family: cursive, sans-serif;
+    -webkit-text-stroke-width: 2px;  /* largura da borda */
+    -webkit-text-stroke-color: #90cf83; /* cor da borda */
+    color:#a9ec9b;
+    font-size: 60px;
+    margin-left: 5%;
+}
+#div-info-banner2 {
+    height: 75%; 
+    width: 55%;
+}
+#div-info-banner2 img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+#btn-saiba {
+    border: 2px solid #809FD2;
+    border-radius: 5px;
+    color:white;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #809FD2;
+    height: 18%;
+    width: 30%;
+}
+#btn-saiba a {
+    text-decoration: none;
+    color:white;
+    padding: 6% 15%;
+}
+#diferencial {
+    height:45%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(../imagens/fundo4.png);
+    background-size: contain;
+}
+.title-div {
+    height: 8%;
+    width: 85%;
+    font-size: 40px;
+    color:white;
+    font-family: cursive, sans-serif;
+    -webkit-text-stroke-width: 1px;  /* largura da borda */
+    /* -webkit-text-stroke-color: #e09586; cor da borda */
+}
+#box-cards {
+    width: 85%;
+    height: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive, sans-serif;
+}
+.cards {
+    height:90%;
+    width:27%;
+    border: 5px dotted #345387;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.cards {
+    text-align: center;
+    color:#364A6B;
+} 
+.cards h2 {
+    font-size: 25px;
+}
+.cards h4 { 
+    font-size: 18px;
+}
+#card1 { 
+    background-color: #FFC4B8;
+}
+#card1 h4 {
+    margin-bottom: 8%;
+}
+#card2 {
+    background-color: #a9ec9b;
+}
+#card3 {
+    background-color: #809FD2;
+}
+#card3 h4 {
+    margin-bottom: 15%;
+}
+#servico {
+    background-color: white;
+    height:80%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+ }
+#imagemthumb {
+    height:100%;
+    width: 100%;
+    background-position: center no-repeat;
+    background-size: cover;
+}
+#equipe {
+    height: 70%;
+    width:100%;
+    text-align: center;
+}
+#equipe h1 {
+    font-family: cursive, sans-serif;
+    -webkit-text-stroke-width: 2px;  /* largura da borda */
+    -webkit-text-stroke-color: grey; /* cor da borda */
+    font-size: 45px;
+    color:white;
+}
+#duvidas {
+    height: 100%;
+    width:100%;
+    text-align: center;
+    background: url(../imagens/fundo4.png);
+    background-size: contain;
+}
+#contato {
+    height:70%;
+    width:100%;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: unset;
+}
+.div-contato {
+    height:100%;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+#div-mensagem {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background:url(../imagens/melequinha2.png)center no-repeat;
+    background-size: cover;
+}
+.div-info-contato {
+    height: 90%;
+    width:70%;
+}
+#div-info-contato2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#div-info-contato1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.div-info-contato h1 {
+    font-family: cursive, sans-serif;
+    -webkit-text-stroke-width: 2px;  /* largura da borda */
+    -webkit-text-stroke-color: #e4a093; /* cor da borda */
+    color:#ecb3a8;
+    font-size: 30px;
+}
+.div-info-contato h2 {
+    font-family: cursive, sans-serif;
+    color:white;
+    font-size: 30px;
+}
+.div-info-contato h5 {
+    font-family: cursive, sans-serif;
+    font-size: 25px;
+}
+.inp {
+    width: 50%;
+    border:1px solid grey;
+    background:transparent;
+    font-family: cursive, sans-serif;
+    color:grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+textarea{
+    height: 90px;
+    width: 300px;
+}
+/* SLIDES */
+.slide {
+    width: 100%;
+    margin: auto;
+    font-family: cursive, sans-serif;
+    /* Ajustando os bonequinhos ao centro */
+    padding: 1% 0;
+    box-sizing: border-box;
+}
+.slides {
+    /* O important coloca o display flex como prioridade */
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.personagem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+}
+.personagem img {
+    height: 40vh;
+}
+button.slick-prev {
+    font-size: 0px; /* RESERTO A FONTE */
+    border: none; /* TIRAR A BORDA DO BOTÃO PADRÃO */
+    width: 25px; 
+    height: 51px;
+    position: absolute;
+    z-index: 99;
+    background: url(../assets/anterior.png) center no-repeat;
+    background-size: cover;
+    top: 35%;
+    left: 4%;
+}
+button.slick-next {
+    font-size: 0px; /* RESERTO A FONTE */
+    border: none; /* TIRAR A BORDA DO BOTÃO PADRÃO */ 
+    width: 25px; 
+    height: 51px;
+    position: absolute;
+    z-index: 99;
+    background: url(../assets/proximo.png) center no-repeat;
+    background-size: cover;
+    top: 35%;
+    right: 4%;
+}
+/* FIM SLIDES*/
+/* DÚVIDAS */
+.container_duvidas {
+    background-color: transparent;
+    padding: 6% 0% 0% 0%;
+}
+.container_duvidas {
+    width: 40%;
+    margin: 0% auto;
+    padding-top: 2%;
+}
+.container_duvidas h1 {
+    font-family: cursive, sans-serif;
+    -webkit-text-stroke-width: 2px;  /* largura da borda */
+    -webkit-text-stroke-color: grey; /* cor da borda */
+    font-size: 45px;
+    color:white;
+    margin-bottom: 2%;
+}
+.accordion {
+    width: 100%;
+    padding: 0% 2.9%;
+    border: 3px solid #a9ec9b;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    margin: 1% 0%;
+    align-items: center;
+}
+.accordion .icon_duvidas {
+    margin: 0% 2% 0% 0%;
+    width: 3%;
+    height: 15px;
+    background: url(https://ecentiva.com.br/wp-content/uploads/2018/05/017-plus.png) no-repeat white; 
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;  
+}
+.accordion h5 {
+    font-size: 16px;
+    margin: 1%; 
+    padding: 0% 0% 0% 0%;
+    font-weight: normal;
+    color: white; 
+    transition: all .5s ease-in;
+}
+.active .icon_duvidas {
+    background: url(https://img.icons8.com/ios/452/minus.png) 1% 1% #a9ec9b;
+}
+.active {
+    background-color: transparent;
+    color: white;
+}
+.active h5 {
+    color: white;
+}
+.painel { 
+    padding: 0% 4%;
+    border-left: 1px solid #a9ec9b;
+    margin-left: 4.5%;
+    font-size: 16px;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0%;
+    color:white;
+    transition: all .5s ease-in;
+}
+/* FIM DÚVIDAS */
+/* SERVIÇOS */
+.text {
+    margin-left: 7%;
+    width: 50%;
+    color: #2e3849;
+    font-size: 18px;
+    font-family: cursive;
+}
+.text h2 {
+    font-family: cursive, sans-serif;
+    -webkit-text-stroke-width: 2px;  /* largura da borda */
+    -webkit-text-stroke-color: #e09586; /* cor da borda */
+    font-size: 45px;
+    color:#ecb3a8;
+}
+#img-servico {
+    width: 65%;
+    height: 80%;
+}
+#notaAdesiva {
+    height:45%;
+    width:50%;
+    background:url(../imagens/adesivoNota.png)center no-repeat;
+    background-size: cover;
+}
+/* CONTATO */
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* font-family: cursive; */
+}
+footer a, p, li{
+    font-size: 18px;
+}
+#contato {
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 50%;
+} 
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container .sec {
+    margin-right: 30px;
+}
+footer .container .sec.aboutus {
+    width: 40%;
+    line-height: 20px;
+}
+footer .container h2 {
+    position: relative;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .container h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #a77ab6;
+}
+footer p {
+    color: black;
+}
+.sci {
+    margin-top: 20px;
+    display: flex;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+.sci li a:hover {
+    background: #a77ab6;
+}
+.sci li a .fa {
+    color: #fff;
+    font-size: 18px;
+}
+.quickLinks {
+    position: relative;
+    width: 25%;
+}
+.quickLinks ul li {
+    list-style: none;
+}
+.quickLinks ul li a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.quickLinks ul li a:hover {
+    color: #a77ab6;
+}
+.contact {
+    width: calc(35% -60px);
+    margin-right: 0 !important;
+}
+.contact .info {
+    position: relative;
+}
+.contact .info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.contact .info li span {
+    color: black;
+}
+.contact .info li a {
+    color: black;
+    text-decoration: none;
+    /* margin-right: %; */
+}
+.contact .info li a:hover {
+    color: #a77ab6;
+}
+.copyrightText {
+    width: 100%; 
+    background: rgb(54,74,107);
+    padding: 10px 100px;
+    text-align: center;
+    color: #fff;
+    height: 6%;
+}
+@media (max-width: 991px) {
+    footer {
+        padding: 40px;
+    }
+    footer .container {
+        flex-direction: column;
+    }
+    footer .container .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .container .sec.aboutus,
+    .quickLinks,
+    .contact {
+        width: 100%;
+    }
+    .copyrightText {
+        padding: 8px 40px;
+    }
+}
+/* FIM CONTATO */

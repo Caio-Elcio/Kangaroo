@@ -1,0 +1,32 @@
+Kangaroo - monitora o que é visto no navegador, (mas o obrigatório é monitorar o desempenho da máquina)=memória, disco, cpu, hora ligada, hora desligada,
+hora limite (que a criança poderia ver)hora excedida (que a criança CAGOU pra restrição de horário), lembrando que tipo nós n proibimos ele de continuar usando,
+só pedimos para que ele desligue o computador por que o responsável dele pediu
+
+A aplicação terá uma média dos horários/ sites visitados pela criança
+Parte de relatório
+
+O kangaroo na parte de pré cadastro, terá pequenos formulários com condições que o usuário deverá aceitar para utilizar, e indicações
+para uma maior precisão do monitoramento.
+(Como por exemplo, termos para permitir acesso aos computadores, e criação de usuários no computador para cada filho cadastrado).
+
+Funcionalidades do sistema
+
+- Verificação e monitoramento de cookies e históricos no navegador
+	Ex: 	Criança ficou:
+		1h - Youtube
+		3h - Facebook
+		2h - Jogos online
+
+- Monitoramento do hardware do PC (Adicional, porém obrigatório pela faculdade)
+- Botão do pânico
+- Geração de relatórios de tempo em cada aplicação que a criança navegou
+	Ex: 	Criança ficou
+		2 horas e meia - Google Chrome
+		1h e meia - FreeFire
+		3h - Minecraft
+
+- No desligamento e/ou ligamento no outro dia gerar um relatório de aplicativos instalados no computador e converter todos em PDF, e enviar ao responsável. Utilizando um horário especifico para essa funcionalidade
+- Gameficação
+
+Botão do pânico
+Game

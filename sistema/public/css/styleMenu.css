@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition-duration: 0.5s;
+}
+/* Menu começo */
+.menuRoxo {
+    position: fixed;
+    z-index: 2;
+    height:100vh;
+    width: 5%;
+    background-color: #2E4D72;
+}
+.menuRoxoGrande {
+    height:100vh;
+    width: 12vw;
+    background-color: #383f52;
+}
+.listaOrdenada {
+    margin-left: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+}
+.listaOrdenada li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 10px;
+}
+.textMenu {
+    font-size: 16px;
+    color: white;
+    display: none;
+    margin: 0px 5px
+}
+.textMenuBlock {
+    font-size: 16px;
+    color: white;
+    margin: 0px 5px;
+    display: block;
+}
+.icons {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.listaOrdenada:nth-child(0) {
+   justify-self: start;
+}
+/* Menu final */

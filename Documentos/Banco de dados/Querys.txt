@@ -1,0 +1,111 @@
+alter table dbo.monitoramento add dataHoraMonitorado datetime;
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE dbo.usuario DROP COLUMN sexo;
+
+ALTER TABLE dbo.usuario DROP COLUMN dataNasc;
+-----------------------------------------------------------------------------------------------------------------------------------------------
+insert into dbo.computador values(
+'nomeUsuarioTeste', 'nomeDependenteTeste', 1, 1
+);
+
+select * from dbo.computador;
+
+insert into dbo.dependente values(
+'nomeDependenteTeste',11,'m','foto.jpg',1
+);
+
+select * from dbo.dependente;
+
+delete from dbo.dependente where idDependente = 3;
+
+insert into dbo.usuario values(
+'luiz',23745327802, 'luiz@gmail.com', 'luiz1234', 'masculino', 18
+);
+
+select * from dbo.usuario;
+
+select * from usuario, computador where fkUsuario = 1 and idUsuario = fkUsuario;
+
+select * from dependente,usuario where fkUsuario = 1 and idUsuario = fkUsuario;
+
+select * from monitoramento;
+
+insert into monitoramento values(
+0,0,0,0,0,0,0,0,0,1
+);
+
+select * from monitoramento where fkComputador = 1;
+
+select * from navegacao;
+
+insert into navegacao values(
+'16:54', 'tituloTeste', 'urlTeste', 1, '2:00',4
+);
+
+select * from dependente;
+
+select * from navegacao,dependente where fkDependente = 4 and fkDependente = idDependente;
+
+*****idMonitoramento = 10463
+
+select * from monitoramento,computador where idComputador = 1 and idComputador = fkComputador;
+
+insert into usuarioatual values(
+'2021-05-15 17:35:01', 1, 4
+);
+
+select * from dependente,computador,usuarioatual where idDependente = 4 and fkDependente = idDependente;
+-----------------------------------------------------------------------------------------------------------------------------------------------
+alter table navegacao
+drop column horaUltimaVisita;
+
+drop table navegacao;
+
+create table navegacao(
+idNavegacao  int primary key identity,
+titulo varchar(255),
+url varchar(255),
+contagemVisitas int,
+fkDependente int
+);
+
+alter table navegacao
+add foreign key (fkDependente) references dependente(idDependente);
+
+insert into navegacao values(
+'tituloTeste', 'urlTeste', 1, 4
+);
+
+select * from navegacao,dependente where fkDependente = 4 and fkDependente = idDependente;
+-----------------------------------------------------------------------------------------------------------------------------------------------
+select fkComputador,dependente.fkUsuario,nomeUsuario from usuarioatual,dependente,usuario where fkComputador = 1 and idDependente = 4;
+
+select * from usuarioatual inner join
+		dependente on fkDependente = idDependente inner join
+			usuario on fkUsuario = idUsuario;	
+select * from Monitoramento;
+
+select * from computador;
+
+select * from usuario;
+
+sp_columns computador;
+-----------------------------------------------------------------------------------------------------------------------------------------------
+create table sitesrestritos(
+titulo varchar(255),
+url varchar(255),
+fkNavegacao int
+);
+
+alter table sitesrestritos
+add foreign key (fkNavegacao) references navegacao(idNavegacao);
+
+ALTER TABLE navegacao ALTER COLUMN titulo varchar(255);
+-----------------------------------------------------------------------------------------------------------------------------------------------
+EXEC sp_rename 'dbo.computador.nomeUsuario', 'nomeComputador', 'COLUMN';
+
+EXEC sp_rename 'dbo.computador.nomeComputador', 'nomeUsuario', 'COLUMN';
+-----------------------------------------------------------------------------------------------------------------------------------------------
+select d.nomeDependente from sitesrestritos s
+inner join navegacao n on s.fkNavegacao = n.idNavegacao
+inner join dependente d on n.fkDependente = d.idDependente

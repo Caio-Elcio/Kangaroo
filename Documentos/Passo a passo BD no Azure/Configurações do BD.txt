@@ -1,0 +1,6 @@
+Nome do servidor: servkangaroo
+Logon do administrador do servidor: kangaroo
+Senha: #Gfgrupo9
+Grupo de Recursos: recKangaroo
+Nome do banco de dados: dbKangaroo
+NOVO nome do servidor: srvkangaroo

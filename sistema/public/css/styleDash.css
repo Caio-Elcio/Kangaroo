@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.backgroundFather {
+    background-color: #F4F4F4;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.paiConteudo {
+    height: 100vh;
+    width: 100vw;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tituloDiv {
+    height: 10vh;
+    width: 90%;
+    display: flex;
+    padding: 0 3%;
+    align-items: center;
+}
+/* Estilização da foto do canto */
+.paiFoto {
+    height: 13vh;
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* Legenda ao lado da foto */
+.paiFoto label {
+    color: #4b4a4a;
+    font-size: 16px;
+}
+.fotoLinha {
+    height: 4rem;
+    width: 4rem;
+    margin: 10px 10px;
+    border: #2E4D72 solid;
+    border-radius: 57%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/account.svg) center no-repeat;
+    background-size: 3rem;
+}
+/* Estilização da foto do canto */
+/* "Painel" */
+h1 {
+    color: #5a5a5a;
+    font-size: 30px;
+}
+/* Cards coloridos */
+.fileiraCardsColoridos {
+    height: 20vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+    justify-content: space-between;
+}
+.cardOne {
+    height: 20vh;
+    width: 17vw;
+    border-radius: 7px;
+    background-color: #80C3D2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.cardTwo {
+    height: 20vh;
+    width: 17vw;
+    border-radius: 7px;
+    background-color: #F0CD3A;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.cardThree {
+    height: 20vh;
+    width: 17vw;
+    border-radius: 7px;
+    background-color: #F98F57;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.cardFourth {
+    height: 20vh;
+    width: 17vw;
+    border-radius: 7px;
+    background-color: #809FD2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.textoMenor {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.textoMaior {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+.spaceTime {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+}
+.hora {
+    display: flex;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+select {
+    height: 55%;
+    width: 55%;
+    border: #2E4D72 solid;
+    border-radius: 4px;
+    background-color: #FEFEFE;
+    display: flex;
+    margin-right: 80px;
+    justify-content: center;
+    align-items: center;
+}
+opt {
+    color: #2E4D72;
+    text-align: center;
+}
+.spaceTime label {
+    margin-right: 6px;
+    color: #2E4D72;
+    font-weight: 600;
+}
+/* Gráficos de baixo */
+.graficosInferiores {
+    height: 85vh;
+    width: 90%;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.graficoLinha1 {
+    height: 45vh;
+    width: 35vw;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #DFDFDF;
+    margin-top: 2%;
+}
+.graficoLinha1 label {
+    color: #5a5a5a;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.graficoLinha2 {
+    height: 45vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #DFDFDF;
+}
+.graficoLinha2 label {
+    color: #5a5a5a;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.graficoLinha3 {
+    height: 45vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #DFDFDF;
+    margin-top: 2%;
+}
+.graficoLinha3 label {
+    color: #5a5a5a;
+    font-weight: bold;
+    margin-top: 10px;
+}

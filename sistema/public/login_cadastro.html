@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login_cadastro.css">
+    <link rel="icon" href="imagens/logo.jfif">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">
+    <script src="./js/validacoes.js"></script>
+    <script src="js/cadastro.js"></script>
+    <title>Kangaroo</title>
+</head>
+
+<body>
+    <section class="background">
+        <section class="card-section" id="login_register">
+            <section class="information-side">
+                <div class="container">
+                    <img src="imagens/login.png">
+                    <p class="welcome_msg">Bem vindo ao Kangaroo</p>
+                    <p>Educar não é proibir, é ensinar!</p>
+                </div>
+            </section>
+            <section class="form-side">
+                <form id="form_login" class="container">
+                    <h1 style="margin-right: 40%; font-weight: 600; font-size: 25px;">Login</h1>
+                    <input type="email" class="form-control" id="email_login" name="email_login"
+                        onkeyup="validar_email()" placeholder="E-mail" required>
+                    <input type="password" class="form-control" id="senha" name="senha" onkeyup="validar_senha()"
+                        placeholder="Senha" required autocomplete="current-password">
+                    <div class="form-buttons">
+                        <a onclick="changeToRegister()">
+                            <p>Não possui cadastro?</p>
+                        </a>
+                        <button onclick="login(event)">Login</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+        <section class="card-section" id="register" style="display: none;">
+            <section class="information-side">
+                <div class="container">
+                    <img src="imagens/cadastro.png">
+                    <p class="welcome_msg ">Bem vindo ao Kangaroo</p>
+                    <p>Educar não é proibir, é ensinar!</p>
+                </div>
+            </section>
+            <section class="form-side">
+                <form id="register_step1">
+                    <h1 style="font-size: 25px; margin-bottom: 10px;font-weight: 600; text-align: center;">
+                        Cadastro <br> de responsável</h1>
+                    <div class="container">
+                        <div class="div_msg">
+                            <p>Preencha corretamente os campos a seguir:</p>
+                        </div>
+                        <input type="text" class="form-control" id="nomeResponsavel" name="nome"
+                            onkeyup="validarnomeResponsavel()" placeholder="Nome" required>
+                        <input type="text" class="form-control cpf-mask" id="cpf" name="cpf" onkeyup="validar_cpf()"
+                            placeholder="CPF" required>
+                        <input type="email" class="form-control" id="email" name="email" onkeyup="validar_email2()"
+                            placeholder="E-mail" required>
+                        <input type="password" class="form-control" id="senha2" name="senha" placeholder="Senha"
+                            onkeyup="validar_senha2()" required minlength="1">
+                        <input type="password" class="form-control" id="senha3" name="confirmarSenha"
+                            placeholder="Confirmar senha" onkeyup="validar_senha3()" required>
+                        <div class="form-buttons">
+                            <a onclick="changeToLogin(event) ">
+                                <p>Já possui cadastro?</p>
+                            </a>
+                            <button onclick="prosseguir(event)">Prosseguir</button>
+                        </div>
+                    </div>
+                </form>
+                <form id="register_step2" style="display: none;">
+                    <h1 style="font-size: 25px; margin-bottom: 10px;font-weight: 600; text-align: center;">
+                        Cadastro <br> de dependentes</h1>
+                    <div class="container">
+                        <input type="text" id="nome" class="form-control" name="nome" onkeyup="validarnomeDependente()"
+                            placeholder="Nome" required minlength="5">
+                        <div class="form-group col-lg-3" style="margin: 0 0 0 0; width: 28vw">
+                            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"
+                                placeholder="Data de nascimento" required>
+                        </div>
+                        <select id="sexo" name='sexo' class="form-control" required>
+                            <option value="invalid">Selecione o sexo</option>
+                            <option value="f" selected>Feminino</option>
+                            <option value="m">Masculino</option>
+                        </select>
+                        <input style="display: none;" id="fkUsuario" name="fkUsuario" type="text">
+                        <input style="display: none;" id="idDependente" name="idDependente" type="text">
+                        <div style="width:28vw;">
+                            <p style="margin: 8px 0 8px 14px;">
+                                <b>Enviar foto de um de seus dependentes</b>
+                            </p>
+                            <input type="file" id="fotoDependente" name="fotoDependente" placeholder="Foto da Criança">
+                            <a onclick="changeSteps(false)"></a>
+                        </div>
+                        <button onclick="cadastrarGeral(event)">Cadastrar</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>
+
+<script async="" src="//www.google-analytics.com/analytics.js">
+</script>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js">
+</script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js">
+</script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js">
+</script>
